@@ -1,0 +1,15 @@
+{{ define "Edit" }}
+    {{ template "Header" }}
+        {{ template "Menu" }}
+        <h2>Novo Cadastro de animal</h2>
+
+        <form method="POST" action="update">
+            <label> Nome </label><input type="text" name="nome" value="{{ .Nome }}" /><br />
+            <label> Raça </label><input type="text" name="raca" value="{{ .Raca }}" /><br />
+            <label> Local perdido </label><input type="text" name="localperd" value="{{ .Localperd }}" /><br />
+            <label> Tipo de animal </label><input type="text" name="tipani" value="{{ .Tipani }}" /><br />
+            <input type="submit" value="Save user">
+        </form><br />
+        <a href="/delete?id={{ .Id }}">Deletar</a>
+    {{ template "Footer" }}
+{{ end }}

@@ -1,0 +1,13 @@
+{{ define "Show" }}
+    {{ template "Header" }}
+        {{ template "Menu" }}
+        
+        
+        <h2>Novo {{ .Id }} </h2>
+        <p>Nome: {{ .Nome }} </p>
+        <p>Raça: {{ .Raca }} </p>
+        <p>Local perdido: {{ .Localperd }} </p>
+        <p>Tipo de animal: {{ .Tipani }} </p>
+        <br /> <a href="/edit?id={{ .Id }}">Editar</a></p><a href="/delete?id={{ .Id }}">Deletar</a>
+    {{ template "Footer" }}
+{{ end }}

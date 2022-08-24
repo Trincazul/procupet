@@ -1,0 +1,30 @@
+{{ define "Index" }}
+    {{template "Header"}}
+        {{template "Menu"}}
+
+<h2>Pet Cadastrados</h2>
+<table border ="1">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Nome</td>
+            <td>Raça</td>
+            <td>Local Perdido</td>
+            <td>Tipo de animal</td>
+        </tr>
+    </thead>
+    <tbody>
+        {{ range . }}
+        <tr>
+            <td>{{ .Id }}</td>
+            <td>{{ .Nome }}</td>
+            <td>{{ .Raca }}</td>
+            <td>{{ .Localperd }}</td>
+            <td>{{ .Tipani }}</td>
+            <td><a href="/show?id={{ .Id }}">Visualizar</a> | <a href="/edit?id={{ .Id }}">Editar</a></td>
+        </tr>
+        {{ end }}
+    </tbody>
+</table>
+    {{ template "Footer" }}
+{{ end }}

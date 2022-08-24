@@ -1,0 +1,14 @@
+{{ define "New" }}
+    {{ template "Header" }}
+        {{ template "Menu" }}
+        <h2>Novo Cadastro de animal</h2>
+
+        <form method="POST" action="insert">
+            <label> Nome </label><input type="text" name="nome" /><br />
+            <label> Raça </label><input type="text" name="raca" /><br />
+            <label> Local perdido </label><input type="text" name="localperd" /><br />
+            <label> Tipo de animal </label><input type="text" name="tipani" /><br />
+            <input type="submit">
+        </form>
+        {{ template "Footer" }}
+    {{ end }}
