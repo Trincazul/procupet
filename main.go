@@ -68,7 +68,7 @@ func Insert(w http.ResponseWriter, r *http.Request) {
 	http.Redirect(w, r, "/", 301)
 }
 
-// Função Update, atualiza valores no banco de dados
+// Função Update, atualiza valores na base de dados
 func Update(w http.ResponseWriter, r *http.Request) {
 
 	// Abre a conexão com o banco de dados usando a função: dbConn()
@@ -140,7 +140,7 @@ func Index(w http.ResponseWriter, r *http.Request) {
 		panic(err.Error())
 	}
 
-	// Monta a struct para ser utilizada no template
+	// Monta a struct para ser utilizada 
 	n := Animalper{}
 
 	// Monta um array para guardar os valores da struct
